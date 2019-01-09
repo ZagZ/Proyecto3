@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar1{
+  background-color: rgba(42, 42, 204, 0.822);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar1 ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navbar1 ul li{
+  margin: 10px 10px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+}
+
+.add-interest{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.add-interest input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.header{
+  background-image: url('http://img2.rtve.es/a/4238722?w=1600&preview=1506154909739.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 50vh;
+}
+
+.header div{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:rgba(255, 255, 255, 0.795);
+}
+
+.div-cards{
+  width:100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardInd{
+  width:25%;
+  min-width: 200px;
+  margin: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.cardInd img{
+  width: 50%;
+  height: 100px;
+  border-radius: 13px;
+  -webkit-box-shadow: 14px 16px 29px 0px rgba(0,0,0,0.51); 
+  box-shadow: 14px 16px 29px 0px rgba(0,0,0,0.51);    
+  margin: 25px;
+}
+
+.profile-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.profileHeader{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileHeader img{
+  width: 200px;
+}
+
+.profileInterest{
+  width: 30%;
+}
