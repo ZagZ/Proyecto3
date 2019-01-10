@@ -13,7 +13,7 @@ class InterestList extends Component {
         
 
     getAllInterest = ()=>{
-        axios.get(`http://localhost:5000/api/interests`)
+        axios.get(`https://sixdegrees-mx.herokuapp.com/api/interests`)
         .then(response=>{
             this.setState({
                 listOfInterests: response.data

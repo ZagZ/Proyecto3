@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const host = 'http://localhost:5000/auth'
+const host = 'https://sixdegrees-mx.herokuapp.com/auth'
 
 //signup
 export const signup = (user) => {

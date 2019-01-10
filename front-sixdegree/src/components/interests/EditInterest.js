@@ -24,7 +24,7 @@ class EditInterest extends Component {
     
         event.preventDefault();
     
-        axios.put(`http://localhost:5000/api/interests/${this.props.theInterest._id}`, { from, work, favfood,favmovie,favsong })
+        axios.put(`https://sixdegrees-mx.herokuapp.com/api/interests/${this.props.theInterest._id}`, { from, work, favfood,favmovie,favsong })
         .then( () => {
             this.props.getTheInterest();
         })

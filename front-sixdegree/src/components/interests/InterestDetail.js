@@ -18,7 +18,7 @@ class InterestDetail extends Component {
         const {params} = this.props.match
         console.log(params);
         
-        axios.get(`http://localhost:5000/api/interests/${params.id}`)
+        axios.get(`https://sixdegrees-mx.herokuapp.com/api/interests/${params.id}`)
         .then(response => {
             const theInterest = response.data
             console.log(theInterest);

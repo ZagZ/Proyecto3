@@ -22,7 +22,7 @@ class AddInterests extends Component {
         const favmovie = this.state.favmovie.toUpperCase();
         const favsong = this.state.favsong.toUpperCase();
 
-        axios.post('http://localhost:5000/api/interests/',
+        axios.post('https://sixdegrees-mx.herokuapp.com/api/interests/',
         {from, work, favfood, favmovie, favsong})
         .then(()=>{
             this.props.getData()
