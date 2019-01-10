@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
 const cors = require('cors')
-
+const passport     = require('./helpers/passport')
+const session      = require('express-session')
+const MongoStore   = require('connect-mongo')(session)
 
 mongoose
     .connect(process.env.DB, {
@@ -34,6 +36,20 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
+
+app.use(session({
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl:24*60*60
+    }),
+    secret: 'gera',
+    resave: true,
+    saveUnitialized: true,
+    cookie:{httpOnly: true, maxAge:60000}
+  }))
+  
+  app.use(passport.initialize())
+  app.use(passport.session())
 
 // Express View engine setup
 
@@ -60,12 +76,17 @@ app.use(cors({
   origin: ['http://localhost:3000']
 }));
 
+
 //Routes Middleware
 
 const index = require('./routes/index');
 app.use('/', index);
 
+const auth = require('./routes/auth/auth')
+app.use('/auth', auth);
+
 const interestRoutes = require('./routes/interest-routes')
 app.use('/api', interestRoutes)
+
 
 module.exports = app;

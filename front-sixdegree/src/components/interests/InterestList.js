@@ -10,12 +10,14 @@ class InterestList extends Component {
         super(props);
         this.state = {listOfInterests:[]}
     }
-    
+        
+
     getAllInterest = ()=>{
         axios.get(`http://localhost:5000/api/interests`)
         .then(response=>{
             this.setState({
                 listOfInterests: response.data
+                
             })
         })
     }
@@ -25,6 +27,7 @@ class InterestList extends Component {
     }
 
     render() {
+
         return (
             <div>
                 <div>
